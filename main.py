@@ -84,8 +84,22 @@
 # L = d * R
 # print(L)
 
-# 5
+# # 4(def)
+# import math
+# long_1 = int(input("Введите долготу 1 точки: "))
+# width_1 = int(input("Введите широту 1 точки: "))
+# long_2 = int(input("Введите долготу 2 точки: "))
+# width_2 = int(input("Введите широту 2 точки: "))
+# R = 6371
+# def objects(*args):
+#     d = math.acos(math.cos((math.sin(width_1) *
+#     math.sin(width_2)) + (math.cos(width_1) *
+#     math.cos(width_2)) * math.cos(width_1 - width_2)))
+#     L = d * R
+#     return L
+# print(objects(long_1, width_1, long_2, width_2))
 
+# 5
 
 # # 6
 # m = int(input("Введите количество строк: "))
@@ -198,14 +212,16 @@
 
 # # 11(def)
 # seat_number = int(input("Введите номер места: "))
-# if seat_number > 36:
-#     print("У вас боковое место!")
-# elif seat_number < 1 and seat_number > 54:
-#     print("Такого места нет!")
-# elif seat_number % 2 == 1:
-#     print("У вас нижнее место!")
-# else:
-#     print("У вас верхнее место!")
+# def seat(a):
+#     if seat_number > 36:
+#         print("У вас боковое место!")
+#     elif seat_number < 1 and seat_number > 54:
+#         print("Такого места нет!")
+#     elif seat_number % 2 == 1:
+#         print("У вас нижнее место!")
+#     else:
+#         print("У вас верхнее место!")
+# seat(seat_number)
 
 # # 12
 # sum_count = float(input("Введите сумму: "))
@@ -225,19 +241,21 @@
 
 # # 12(def)
 # sum_count = float(input("Введите сумму: "))
-# count500 = sum_count // 500
-# sum500 = sum_count % 500
-# count100 = sum500 // 100
-# sum100 = sum500 % 100
-# count10 = sum100 // 10
-# sum10 = sum100 % 10
-# count2 = sum10 // 2
-# sum2 = sum10 % 2
-# print("Кол-во купюр по 500: " + str(count500) +
-#       "\nКол-во купюр по 100: " + str(count100) +
-#       "\nКол-во купюр по 10: " + str(count10) +
-#       "\nКол-во купюр по 2: " + str(count2) +
-#       "\nОстаток: " + str(sum2))
+# def summ(a):
+#     count500 = sum_count // 500
+#     sum500 = sum_count % 500
+#     count100 = sum500 // 100
+#     sum100 = sum500 % 100
+#     count10 = sum100 // 10
+#     sum10 = sum100 % 10
+#     count2 = sum10 // 2
+#     sum2 = sum10 % 2
+#     print("Кол-во купюр по 500: " + str(count500) +
+#           "\nКол-во купюр по 100: " + str(count100) +
+#           "\nКол-во купюр по 10: " + str(count10) +
+#           "\nКол-во купюр по 2: " + str(count2) +
+#           "\nОстаток: " + str(sum2))
+# summ(sum_count)
 
 # # 13
 # n_prost = int(input("Введите число: "))
@@ -256,16 +274,18 @@
 # # 13(def)
 # n_prost = int(input("Введите число: "))
 # n = 2
-# while n < n_prost:
-#     if n_prost % n == 0:
-#         print("Нет")
-#         break
-#         i += 1
-#     elif n_prost < 2:
-#         print("Введите число больше 1")
-#     else:
-#         print("Является")
-#         break
+# def prostoe(a):
+#     while n < n_prost:
+#         if n_prost % n == 0:
+#             print("Нет")
+#             break
+#             i += 1
+#         elif n_prost < 2:
+#             print("Введите число больше 1")
+#         else:
+#             print("Является")
+#             break
+# prostoe(n_prost)
 
 # # 14
 # M = int(input("Введите число М: "))
@@ -280,21 +300,13 @@
 # M = int(input("Введите число М: "))
 # a = int(input("Введите диапазон от а: "))
 # b = int(input("Введите диапазон до b: "))
-#
-# for m in range(a, b+1):
-#     res = M * m
-#     print(str(M) + " * " + str(m) + " = " + str(res))
+# def diap(*args):
+#     for m in range(a, b+1):
+#         res = M * m
+#         print(str(M) + " * " + str(m) + " = " + str(res))
+# diap(M, a, b)
 
 # # 15
-# import random
-# N = int(input("Введите длину:"))
-# A = list(range(1, N+1))
-# print(A)
-# for i in range(len(A)-1):
-#     A[i], A[i+1] = A[i+1], A[i]
-# print(A)
-
-# # 15(def)
 # import random
 # N = int(input("Введите длину:"))
 # A = list(range(1, N+1))
