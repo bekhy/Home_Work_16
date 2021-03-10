@@ -124,7 +124,7 @@
 # c = a/1000
 # print("В тонне: ", str(c))
 
-# # 8
+# # 8(def)
 # b = float(input('Введите вес в граммах: '))
 # def kg(a):
 #     c = a / 1000
@@ -146,7 +146,7 @@
 # else:
 #     print("Не пролезет")
 
-# # 9
+# # 9(def)
 # a = float(input("Длина коробки: "))
 # b = float(input("Ширина коробки: "))
 # c = float(input("Высота коробки: "))
@@ -172,16 +172,18 @@
 # else:
 #     print("Нельзя")
 
-# 10
-import math
-diametr = float(input("Введите диаметр поперечного сечения бревна: "))
-brus = float(input("Введите ширину бруса: "))
-s_brevno = (diametr / 2) ** 2 * math.pi
-s_brus = brus ** 2
-if s_brus < s_brevno:
-    print("Можно выпилить")
-else:
-    print("Нельзя")
+# # 10(def)
+# import math
+# diametr = float(input("Введите диаметр поперечного сечения бревна: "))
+# brus = float(input("Введите ширину бруса: "))
+# def brevno(a, b):
+#     s_brevno = (diametr / 2) ** 2 * math.pi
+#     s_brus = brus ** 2
+#     if s_brus < s_brevno:
+#         print("Можно выпилить")
+#     else:
+#         print("Нельзя")
+# brevno(diametr, brus)
 
 # # 11
 # seat_number = int(input("Введите номер места: "))
@@ -194,7 +196,34 @@ else:
 # else:
 #     print("У вас верхнее место!")
 
+# # 11(def)
+# seat_number = int(input("Введите номер места: "))
+# if seat_number > 36:
+#     print("У вас боковое место!")
+# elif seat_number < 1 and seat_number > 54:
+#     print("Такого места нет!")
+# elif seat_number % 2 == 1:
+#     print("У вас нижнее место!")
+# else:
+#     print("У вас верхнее место!")
+
 # # 12
+# sum_count = float(input("Введите сумму: "))
+# count500 = sum_count // 500
+# sum500 = sum_count % 500
+# count100 = sum500 // 100
+# sum100 = sum500 % 100
+# count10 = sum100 // 10
+# sum10 = sum100 % 10
+# count2 = sum10 // 2
+# sum2 = sum10 % 2
+# print("Кол-во купюр по 500: " + str(count500) +
+#       "\nКол-во купюр по 100: " + str(count100) +
+#       "\nКол-во купюр по 10: " + str(count10) +
+#       "\nКол-во купюр по 2: " + str(count2) +
+#       "\nОстаток: " + str(sum2))
+
+# # 12(def)
 # sum_count = float(input("Введите сумму: "))
 # count500 = sum_count // 500
 # sum500 = sum_count % 500
@@ -224,7 +253,30 @@ else:
 #         print("Является")
 #         break
 
+# # 13(def)
+# n_prost = int(input("Введите число: "))
+# n = 2
+# while n < n_prost:
+#     if n_prost % n == 0:
+#         print("Нет")
+#         break
+#         i += 1
+#     elif n_prost < 2:
+#         print("Введите число больше 1")
+#     else:
+#         print("Является")
+#         break
+
 # # 14
+# M = int(input("Введите число М: "))
+# a = int(input("Введите диапазон от а: "))
+# b = int(input("Введите диапазон до b: "))
+#
+# for m in range(a, b+1):
+#     res = M * m
+#     print(str(M) + " * " + str(m) + " = " + str(res))
+
+# # 14(def)
 # M = int(input("Введите число М: "))
 # a = int(input("Введите диапазон от а: "))
 # b = int(input("Введите диапазон до b: "))
@@ -242,4 +294,11 @@ else:
 #     A[i], A[i+1] = A[i+1], A[i]
 # print(A)
 
-# 16
+# # 15(def)
+# import random
+# N = int(input("Введите длину:"))
+# A = list(range(1, N+1))
+# print(A)
+# for i in range(len(A)-1):
+#     A[i], A[i+1] = A[i+1], A[i]
+# print(A)
